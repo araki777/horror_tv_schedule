@@ -26,7 +26,7 @@ def main():
     chrome_options.add_argument("--no-sandbox")  # セキュリティ対策のためのオプション
 
     # Chromeドライバーのパスを指定
-    chrome_driver_path = "./WebDriver/chrome/chromedriver"
+    chrome_driver_path = os.getenv("WEB_DRIVER_PATH")
 
     # Chromeドライバーを起動するためのサービスを設定
     chrome_service = webdriver.chrome.service.Service(chrome_driver_path)
